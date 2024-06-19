@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que o formulário seja submetido automaticamente
+        event.preventDefault();
 
         // Limpa mensagens de erro anteriores
         clearErrorMessages();
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return false;
         }
 
-        // Verificação do email utilizando uma expressão regular simples
+        // Verificação do email utilizando regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailValue)) {
             displayErrorMessage("email-error", "Por favor, digite um e-mail válido.");
