@@ -9,7 +9,7 @@ const PORT = 3000
 app.use(json())
 console.log(process.env.MONGO_PORT)
 
-app.post("/submit", (request, response) => {
+app.post("/submit", async (request, response) => {
     const { name, email, message } = request.body
     
     if (name.length < 3) {
@@ -39,6 +39,8 @@ app.post("/submit", (request, response) => {
     */
 
     const contact = new Contact()
+    const contactCollection = await contact.db.createCollection("contacts");
+    contactCollection.insertOne();
 
     return response.status(200).json({
         message: "Mensagem do usuário enviada com sucesso."
