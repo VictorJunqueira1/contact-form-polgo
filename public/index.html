@@ -28,16 +28,19 @@
                     <div class="form">
                         <form id="contactForm" class="contact-info">
                             <label for="name">Seu Nome:</label>
-                            <input type="text" id="name" name="name" required minlength="3">
-                        
+                            <input type="text" id="name" name="name" minlength="3">
+                            <span class="error-message" id="name-error"></span>
+
                             <label for="email">Seu Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        
+                            <input type="email" id="email" name="email">
+                            <span class="error-message" id="email-error"></span>
+
                             <label for="message">Mensagem:</label>
-                            <textarea id="message" name="message" required minlength="10"></textarea>
-                        
+                            <textarea id="message" name="message" minlength="10"></textarea>
+                            <span class="error-message" id="message-error"></span>
+
                             <button type="submit">Enviar</button>
-                        </form>                        
+                        </form>
                     </div>
                 </div>
             </div>
@@ -52,8 +55,10 @@
                 <a href="#">Cookies</a>
             </div>
             <div class="social-links">
-                <a href="https://www.linkedin.com/company/polgo-varejo-inteligente/?originalSubdomain=br"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/polgo.varejointeligente/"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/polgo-varejo-inteligente/?originalSubdomain=br"><img
+                        src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/polgo.varejointeligente/"><img src="images/instagram.png"
+                        alt="Instagram"></a>
             </div>
         </div>
     </footer>
