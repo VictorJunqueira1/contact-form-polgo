@@ -1,6 +1,7 @@
 import e, { json } from "express"
 import * as dotenv from "dotenv"
 import "./config/connection.js"
+import { Contact } from "./models/Contact.js"
 dotenv.config()
 
 const app = e()
@@ -30,16 +31,18 @@ app.post("/submit", (request, response) => {
         })
     }
 
-    return response.status(200).json({
-        message: "Mensagem do usuário enviada com sucesso."
-    })
-
     /* 
         Passo 1: Pegar valor do email 
         Passo 2: Verificar se o email já existe no banco de dados
         Passo 3: Se existir, não deixar inserir
         Passo 4: Se não existir, registrar
     */
+
+    const contact = new Contact()
+
+    return response.status(200).json({
+        message: "Mensagem do usuário enviada com sucesso."
+    })
 })
 
 app.listen(PORT, () => {
