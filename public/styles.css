@@ -14,19 +14,28 @@ body {
     margin: 0 auto;
 }
 
+.container-main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px 3px #dfdfdf;
+}
+
 .container span {
     color: #7700ff;
 }
 
 .contact-section {
+    background-image: url("images/polgo-wallpaper.png");
     padding: 60px 0;
     text-align: center;
-    background: #f9f9f9;
 }
 
 .contact-section h2 {
     font-size: 36px;
-    color: #333;
     margin-bottom: 30px;
     font-weight: 600;
 }
