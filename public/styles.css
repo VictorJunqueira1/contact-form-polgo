@@ -21,7 +21,7 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 2px 1px 5px 3px #fff;
+    box-shadow: 2px 1px 5px 3px #e0e0e0;
 }
 
 .container span {
@@ -139,7 +139,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
     font-size: 18px;
     font-family: inherit;
     margin-top: 20px;
@@ -155,6 +155,7 @@ footer {
     color: #000;
     text-align: center;
     border-top: 1px solid #eee;
+    display: flex;
 }
 
 footer .container {
