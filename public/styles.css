@@ -29,10 +29,6 @@ body {
 }
 
 .contact-section {
-    background-image: url("images/polgo-right-tentacle.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     padding: 60px 20px;
     text-align: center;
     background-color: #f8f8f8;
