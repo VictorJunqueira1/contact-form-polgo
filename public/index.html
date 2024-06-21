@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Grupo Polgo</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="imagex/png" href="images/logo.png">
+    <link rel="shortcut icon" type="imagex/png" href="images/logo-polgo.png">
 </head>
 
 <body>
@@ -21,12 +21,13 @@
                         <h3>Informações de Contato</h3>
                         <p>Contamos com uma equipe com mais de 70 colaboradores altamente capacitados, seguindo uma
                             metodologia ágil de desenvolvimento para fornecer soluções personalizadas e eficientes.</p>
-                        <div class="contact-area">
+                        <div class="contact-area" style="margin-top: 130px;">
                             <p><img src="images/telephone.png"
                                     style="width: 20px; height: auto;"><strong>Telefone:</strong> +55 (19) 99836-0161
                             </p>
                             <p><img src="images/email.png" style="width: 20px; height: auto;"><strong>Email: </strong>
-                                <a href="mailto:andre@polgo.com.br">andre@polgo.com.br</a>
+                                <a href="mailto:andre@polgo.com.br"
+                                    style="text-decoration: none; color: #333;">andre@polgo.com.br</a>
                             </p>
                             <p><img src="images/location.png"
                                     style="width: 20px; height: auto;"><strong>Localização:</strong> Mogi Guaçu, SP</p>
@@ -35,15 +36,15 @@
                     <div class="form">
                         <form id="contactForm" class="contact-info">
                             <label for="name">Seu Nome:</label>
-                            <input type="text" id="name" name="name" minlength="3">
+                            <input type="text" id="name" name="name" minlength="3" required>
                             <span class="error-message" id="name-error"></span>
 
                             <label for="email">Seu Email:</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required>
                             <span class="error-message" id="email-error"></span>
 
                             <label for="message">Mensagem:</label>
-                            <textarea id="message" name="message" minlength="10"></textarea>
+                            <textarea id="message" name="message" minlength="10" required></textarea>
                             <span class="error-message" id="message-error"></span>
 
                             <button type="submit">Enviar</button>
