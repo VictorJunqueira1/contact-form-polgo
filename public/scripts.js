@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         // Limpa mensagens de erro anteriores
@@ -38,7 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
             return false;
         }
 
-        alert("Formulário enviado com sucesso!");
+        // Se todas as validações passarem, envia o formulário
+        try {
+            console.log("Enviando dados:", { name: nameValue, email: emailValue, message: messageValue });
+
+            const response = await fetch('http://localhost:3000/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: nameValue, email: emailValue, message: messageValue }),
+            });
+
+            const result = await response.json();
+            console.log("Resposta recebida:", result);
+
+            if (response.ok) {
+                alert(result.message);
+            } else {
+                alert(result.error);
+            }
+        } catch (error) {
+            console.error("Erro ao enviar dados:", error);
+            alert("Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.");
+        }
     });
 
     function displayErrorMessage(id, message) {

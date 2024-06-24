@@ -23,7 +23,7 @@
                             metodologia ágil de desenvolvimento para fornecer soluções personalizadas e eficientes.</p>
                         <div class="contact-area">
                             <p><img src="images/telephone.png"
-                                    style="width: 20px; height: auto;"><strong>Telefone:</strong> +55 (19) 99836-0161
+                                    style="width: 20px; height: auto;"><strong>Telefone:</strong>(19) 99836-0161
                             </p>
                             <p><img src="images/email.png" style="width: 20px; height: auto;"><strong>Email: </strong><a
                                     href="mailto:andre@polgo.com.br"
@@ -57,9 +57,9 @@
         <div class="container">
             <p>© 2024 Grupo Polgo. Todos os direitos reservados.</p>
             <div class="footer-links">
-                <a href="#">Termos</a>
-                <a href="#">Privacidade</a>
-                <a href="#">Cookies</a>
+                <a href="https://polgo.com.br/">A Polgo</a>
+                <a href="https://polgo.com.br/politicas.html">Políticas</a>
+                <a href="https://polgo.com.br/politicas.html">LGPD</a>
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/company/polgo-varejo-inteligente/?originalSubdomain=br"><img
@@ -69,33 +69,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', async function (event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            console.log("Enviando dados:", { name, email, message });
-
-            const response = await fetch('http://localhost:3000/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, message }),
-            });
-
-            const result = await response.json();
-            console.log("Resposta recebida:", result);
-
-            if (response.ok) {
-                alert(result.message);
-            } else {
-                alert(result.error);
-            }
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
